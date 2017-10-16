@@ -1,10 +1,10 @@
 import boto3
 
 # specify AWS keys
-aws_access_key_id = "AKIAI4M37TGWZ2X6NMVQ"
-aws_secret_access_key = "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"
+aws_access_key_id = <AWS ACCESS KEY>
+aws_secret_access_key = <AWS SECRET KEY>
 region = "us-east-1"
-instance_ids = ["i-02338f8e7928a3e73"]
+instance_ids = ["<EC2 Instance Id>"]
 
 def processInstance(action = "check_all"):
     if action == "check_all":
