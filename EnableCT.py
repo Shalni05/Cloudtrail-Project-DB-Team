@@ -16,7 +16,7 @@ def enablecloudtrail(AccountId):
 	
 	try:
 
-		s3 = boto3.client('s3')
+		s3 = session.client('s3')
 		S3Bucket = 'cloudtrail-' + str(random.randint(11111,99999))
 		s3.create_bucket(Bucket=S3Bucket, CreateBucketConfiguration={'LocationConstraint': 'us-west-2'}, )
 		
@@ -64,7 +64,7 @@ def enablecloudtrail(AccountId):
 	# Creating a new Trail
 
 	CloudTrailName = 'CloudTrail-Test1'
-	ct = boto3.client('cloudtrail')
+	ct = session.client('cloudtrail')
 	
 	try:
 
